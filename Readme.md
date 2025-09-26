@@ -2,7 +2,7 @@
 
 * Студент: [Дмитрий Семенов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2676369).
 * Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797).
-* Сайт: [Мой проект Sedona] (https://dmvsemenov.github.io/2676369-sedona-2/).
+* Сайт: [Мой проект Sedona](https://dmvsemenov.github.io/2676369-sedona-2/).
 
 ---
 
