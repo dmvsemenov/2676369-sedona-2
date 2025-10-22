@@ -12,7 +12,7 @@
       <nav class="navigation">
 
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="#" width="140" height="70" alt="Логотип города Седона">
+          <img class="page-header-logo" src="/images/icons/sedona-logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
 
         <ul class="navigation-list">
@@ -24,7 +24,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalogue.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalogue.html" area-current="page">Гостиницы</a>
           </li>
         </ul>
 
@@ -36,8 +36,8 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
-              <span class="notification-badge">12</span>
+              <span class="visually-hidden">Избранное с отображением количества добавленных отелей</span>
+              <span class="likes-number">12</span>
             </a>
           </li>
           <li class="navigation-user-item">
@@ -52,17 +52,17 @@
 
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
+        <ol class="breadcrumbs">
           <li class="background-item">
             <a class="visually-hidden" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
+            <a class="breadcrumbs-link" href="catalogue.html" area-current="page">Гостиницы</a>
           </li>
-        </ul>
+        </ol>
       </header>
 
-      <section class="filter-hotels" data-test=" filter">
+      <section class="filter-hotels" data-test="filter">
 
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalogue-filter" action="https://echo.htmlacademy.ru/" target="_blank" method="get">
@@ -71,18 +71,18 @@
             <legend class="catalogue-filter-title">Инфраструктура</legend>
             <ul class="catalogue-filter-list">
               <li class="catalogue-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>Бассейн
+                <label class="controls">
+                  <input class="controls-input" type="checkbox" name="pool" checked>Бассейн
                 </label>
               </li>
               <li class="catalogue-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>Парковка
+                <label class="controls">
+                  <input class="controls-input" type="checkbox" name="parking" checked>Парковка
                 </label>
               </li>
               <li class="catalogue-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="internet">Wi-Fi
+                <label class="controls">
+                  <input class="controls-input" type="checkbox" name="internet">Wi-Fi
                 </label>
               </li>
             </ul>
@@ -92,18 +92,18 @@
             <legend class="catalogue-filter-title">Тип Жилья</legend>
             <ul class="catalogue-filter-list">
               <li class="catalogue-filter-item">
-                <label class="control">
+                <label class="controls">
                   <input class="control-input" type="radio" name="type-hotel" value="hotel">Гостиница
                 </label>
               </li>
               <li class="catalogue-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="type-hotel" value="motel">Мотель
+                <label class="controls">
+                  <input class="controls-input" type="radio" name="type-hotel" value="motel">Мотель
                 </label>
               </li>
               <li class="catalogue-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="type-hotel" value="apart">Апартаменты
+                <label class="controls">
+                  <input class="controls-input" type="radio" name="type-hotel" value="apart">Апартаменты
                 </label>
               </li>
             </ul>
@@ -116,7 +116,8 @@
       </section>
 
       <section class="filter-results" data-test="catalog">
-        <h2 class="inner-title">Найдено гостиниц: 38</h2>
+        <h2 class="inner-title">Найдено гостиниц: </h2>
+        <span class="found-number">38</span>
 
         <select class="select-control" name="Сортировка">
           <option value="cheap">Сначала дешевые</option>
@@ -124,34 +125,39 @@
           <option value="pupular">Сначала популярные</option>
         </select>
 
-        <b class="visually-hidden" type="submit">Отсортировать отели</b>
+        <b class="visually-hidden">Отсортировать отели</b>
 
-        <a class="sort-button" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="sort-button" href="#">
-          <span class="visually-hidden">Показать по-одной</span>
-        </a>
-        <a class="sort-button" href="#">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <ol>
+          <a class="sort-button" href="catalogue.html?view=tile">
+            <span class="visually-hidden">Показать карточки</span>
+          </a>
+          <a class="sort-button" href="catalogue.html?view=card">
+            <span class="visually-hidden">Показать по-одной</span>
+          </a>
+          <a class="sort-button" href="catalogue.html?view=list">
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </ol>
+
 
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Amara Resort & Spa">
+              <img class="hotel-card-image" src="/images/catalogue/amara_resort_and_spa.jpg" width="300" height="212" alt="Amara Resort & Spa">
+            </a>
+            <a class="hotel-card-link" href="#" tabindex="-1">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">От 4000 ₽</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button" href="#" tabindex="-1">Подробнее</a>
             <a class="button favorite-button" href="#">В избранное</a>
             <p class="rating-stars">4 звезды</p>
-            <p class="button rating-status">Рейтинг: 8,5</p>
+            <p class="rating-status">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Villas at Poco Diablo">
+              <img class="hotel-card-image" src="/images/catalogue/villas_at_poco_diablo.jpg" width="300" height="212" alt="Villas at Poco Diablo">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -163,7 +169,7 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Desert Quail Inn">
+              <img class="hotel-card-image" src="/images/catalogue/desert_quail_inn.jpg" width="300" height="212" alt="Desert Quail Inn">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -175,7 +181,7 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="GreenTree Inn">
+              <img class="hotel-card-image" src="/images/catalogue/greentree_inn.jpg" width="300" height="212" alt="GreenTree Inn">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -214,12 +220,12 @@
 
     </main>
 
-    <footer class="page-footer" data-test="footer">
+    <footer class="catalogue-footer" data-test="footer">
 
-      <section class="page-footer-subscribe" data-test="subscribe">
-        <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-        <p class="page-footer-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="footer-subscribe-form" action="https://echo.htmlacademy.ru/" target="_blank" method="post">
+      <section class="subscribe" data-test="subscribe">
+        <h2 class="catalogue-footer-title">Подпишитесь на рассылку</h2>
+        <p class="catalogue-footer-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" target="_blank" method="post">
           <label for="subscribe-email">Email</label>
           <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail"
             onfocus="this.value='';" required>
@@ -262,8 +268,7 @@
       <section class="copyright">
         <h2 class="visually-hidden">Разработчик</h2>
         <a href="https://htmlacademy.ru/" target="_blank">
-          <img class="footer-academy-logo" src="#" width="115" height="33"
-            alt="Логотип htmlacademy ведет на страницу разработчика">
+          <img class="footer-academy-logo" src="/images/icons/htmlacademy-logo.svg" width="115" height="33" alt="Логотип htmlacademy ведет на страницу разработчика">
         </a>
       </section>
 
