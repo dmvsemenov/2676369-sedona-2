@@ -74,7 +74,7 @@ body {
   text-align: center;
   color: #000000;
   background: #f2f2f2 url("../images/hero-background.jpg") no-repeat center;
-  background-size: 100% auto;
+  background-size: 1200px 485px;
 }
 
 .main-index {
@@ -121,15 +121,21 @@ body {
 .page-subscribe {
   color: #000000;
   text-align: center;
-  background-size: 100% auto;
+  background-size: 1200px 415px;
   background: #f2f2f2 url("../images/subscribe-background.jpg") no-repeat center;
 }
 
 .page-subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .page-subscribe-text {
+  font-size: 22px;
+  line-height: 26px;
   color: #ffffff;
 }
 
@@ -285,8 +291,4 @@ body {
   text-align: center;
   background-size: 100% auto;
   background-color: #ffffff;
-}
-
-.page-subscribe-text {
-  color: #333333;
 }
